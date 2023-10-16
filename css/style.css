@@ -1,6 +1,9 @@
 *{
     box-sizing:border-box;
 }
+html{
+    font-size: 20px;
+}
 
 body{
     margin : 0 auto;
@@ -49,7 +52,21 @@ header{
     background-color: #56AE48;
     padding: 2%;
     text-align: center;
-    border-radius: 10%;
+    border-radius: 50%;
+}
+.varer{
+    background-color: #d9d9d9;
+    text-align: center;
+}
+.varer ul{
+    margin: auto;
+    list-style-type: none;
+}
+
+
+section{
+
+    padding-top: 50px;
 }
 nav a{
     text-decoration: none;
