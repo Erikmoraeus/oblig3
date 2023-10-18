@@ -18,6 +18,12 @@ body{
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "topp" "hovedomraade" "sidebar" "baann";
 }
+.skoboks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 400px; /* You can adjust the max-width as needed */
+}
 
 header{
     grid-area:topp;
@@ -25,6 +31,9 @@ header{
 .navbar{
     margin: 0%;
     padding: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30%;    
 }
 
 main{
@@ -50,7 +59,6 @@ header nav ul li{
 }
 #logo{
     text-decoration: none;
-    font-size: 18;
     font-weight: 600;
     color: #000;
     
@@ -59,7 +67,6 @@ header nav ul li{
     text-align: center;
     background-color: #d9d9d9;
     margin-top: 30px;
-    text-align: top;
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -68,7 +75,7 @@ header nav ul li{
     display: inline-block;
     padding: 0;
     text-decoration: none;
-    background-color: greenyellow;
+    background-color: #56AE48;
     border-radius: 4px;
 }
 
@@ -87,17 +94,33 @@ header nav ul li{
 }
 
 .default-flex{
-    text-align: inherit;
+    display: inline;
+    padding: 17px;
 }
 
-#pris{
-    display: inline-block;
+.default-flex img{
+    height: 40%;
+    width: 40%;
+}
+
+.pris{
+    padding-left: 20%;
+    padding-top: 10%;
+    width: 40%;
+    float: left;
+    font-size: 10px;
+}
+
+.prisrod{
+    color: #ad3c3c;
+    text-decoration: line-through;
 }
 
 .varer{
     background-color: #d9d9d9;
     padding: 1rem;
     text-align: center;
+    
 }
 
 .varer ul li{
@@ -218,6 +241,24 @@ article img{
         grid-column-end: 4;
         grid-row-start: 3;
         grid-row-end: 4;
+    }
+
+    .navbar{
+        font-size: 1.5rem;
+    }
+
+    .hosttilbud{
+        background-color: #56AE48;
+        padding: 90px;
+    }
+
+    .returboks{
+        margin-left: 20%;
+        margin-right: 30%;
+    }
+
+    .innboks{
+        padding: 200px;
     }
 }
 
