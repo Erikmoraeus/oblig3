@@ -11,6 +11,7 @@
     <title>Forside</title>
 </head>
 <body>
+    <section id="grid-container">
     <header>
     <nav>
         <section class ="navbar">
@@ -37,18 +38,39 @@
             </ul>
         </section>
         <!--Seksjon sko-->
-        <article class="default-flex">
-                <img src="img/craiyon_135005_mountain_shoes.png" alt="Image category for woman">
-        </article>
-        <article class="default-flex right">
-                <img src="img/craiyon_135013_mountain_shoes.png" alt="Image category for men">
-        </article>
-        <article class="default-flex">
-                <img src="img/craiyon_135023_mountain_shoes.png" alt="">  
-        </article>
-        <article class="default-flex right">
-                <img src="img/craiyon_135039_hi_tech_trekking_mid_cut_shoes.png" alt="hi tech trekking mid cut shoes">  
-        </article>
+        <div class="image-grid">
+            <div class="image-row">
+                <section class="default-flex">
+                    <article>
+                        <img src="img/craiyon_135005_mountain_shoes.png" alt="Image category for woman">
+                        <p>bilde hentet fra https://www.craiyon.com/ </p>
+                    </article>
+                </section>
+                <section class="default-flex">
+                    <article>
+                        <img src="img/craiyon_135013_mountain_shoes.png" alt="Image category for men">
+                        <p>bilde hentet fra https://www.craiyon.com/ </p>
+                    </article>
+                </section>
+            </div>
+            <div class="image-row">
+                <section class="default-flex">
+                    <article>
+                        <img src="img/craiyon_135023_mountain_shoes.png" alt="">
+                        <p>bilde hentet fra https://www.craiyon.com/ </p>
+                    </article>
+                </section>
+                <section class="default-flex">
+                    <article>
+                        <img src="img/craiyon_135039_hi_tech_trekking_mid_cut_shoes.png" alt="hi tech trekking mid cut shoes">
+                        <p>bilde hentet fra https://www.craiyon.com/ </p>
+                    </article>
+                </section>
+            </div>
+        </div>
+    
+    
+    
         
         <footer>
         <section id="downbar">
@@ -61,10 +83,11 @@
                 <h3>Informasjon</h3>
             </article>
             <article class ="info">
-                <h3><a href="returside.html">Hjelp</a></h3>
+                <h3><a href="returside.html">Retur</a></h3>
             </article>
         </section>
         </footer>
     </main>
+    </section>
 </body>
 </html>

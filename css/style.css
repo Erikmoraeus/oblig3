@@ -1,39 +1,13 @@
-*{
-    box-sizing:border-box;
-}
+
 html{
     font-size: 15px;
 }
 
 body{
-    margin : 0 auto;
     max-width: 1400px;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #FFF;
-}
-#grid-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "topp" "hovedomraade" "sidebar" "baann";
-}
-.skoboks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 400px; /* You can adjust the max-width as needed */
-}
-
-header{
-    grid-area:topp;
-}
-.navbar{
-    margin: 0%;
-    padding: 0%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 30%;    
 }
 
 main{
@@ -47,7 +21,37 @@ aside{
 footer{
     grid-area: baann;
 }
+/*index.html*/
+#grid-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
 
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "topp" "hovedomraade" "sidebar" "baann";
+}
+
+.skoboks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 400px; 
+}
+
+header{
+    grid-area: topp;
+}
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 
 header{
     background-color: #d9d9d9;
@@ -63,12 +67,18 @@ header nav ul li{
     color: #000;
     
 }
+
 #hosttilbud{
     text-align: center;
     background-color: #d9d9d9;
-    margin-top: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-right: 10%;
+}
+
+article img{
+    height: 40%;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #tilbud{
@@ -78,7 +88,7 @@ header nav ul li{
     background-color: #56AE48;
     border-radius: 4px;
 }
-
+/*produkt.html*/
 .filter{
     background-color: #000;
     color: #FFF;
@@ -94,8 +104,9 @@ header nav ul li{
 }
 
 .default-flex{
-    display: inline;
-    padding: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
 }
 
 .default-flex img{
@@ -103,6 +114,9 @@ header nav ul li{
     width: 40%;
 }
 
+.default-flex p{
+    font-size: 15px;
+}
 .pris{
     padding-left: 20%;
     padding-top: 10%;
@@ -120,20 +134,21 @@ header nav ul li{
     background-color: #d9d9d9;
     padding: 1rem;
     text-align: center;
+    margin-right: 10%;
     
 }
 
 .varer ul li{
     list-style: none;
     display: inline;
+    padding: 10px;
 }
 
 .varer ul li a{
     color: #000;
     text-decoration: none;
-    margin-right: 20px;
 }
-
+/*returside.html*/
 .hva-retur{
     padding-left: 40px;
 }
@@ -169,35 +184,29 @@ header nav ul li{
     padding-bottom: 30px;
 }
 
-section{
-
-    padding-top: 20px;
-}
 nav a{
     text-decoration: none;
     color: #000;
 }
 
-article{
-    display: inline;
-    padding: 17px;
-}
 
-article img{
-    height: 40%;
-    width: 40%;
-}
 
-#downbar{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+
+
+#downbar {
+    font-size: 12px;
     background-color: #423F3F;
+    padding-right: 10px;
+    display: flex;
     justify-content: space-around;
+    align-items: center;
+    margin-right: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
-#downbar h2{
-    width: 100%;
+#downbar h2 {
     text-align: center;
 }
 
@@ -212,39 +221,40 @@ article img{
 }
 
 @media only screen and (min-width: 600px){
-    #grid-container{
+    #grid-container {
+        display: grid;
+
         grid-template-columns: 1fr 1fr 1fr;
-    }
-    header{
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
+
+        grid-template-areas:
+          "header header header"
+          "main main main"
+          "aside aside aside"
+          "footer footer footer";
+
+        width: 100%;
+      }
     
-    main{
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end:3;
-    }
+      header {
+        grid-area: header;
+      }
     
-    aside{
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
-    }
+      main {
+        grid-area: main;
+      }
     
-    footer{
-        grid-column-start: 1;
-        grid-column-end: 4;
-        grid-row-start: 3;
-        grid-row-end: 4;
+      aside {
+        grid-area: aside;
+      }
+    
+      footer {
+        grid-area: footer;
+      }
     }
 
     .navbar{
         font-size: 1.5rem;
+        padding-left: 10%;
     }
 
     .hosttilbud{
@@ -260,5 +270,9 @@ article img{
     .innboks{
         padding: 200px;
     }
-}
+    main{
+        padding-left: 10%;
+        float: right;
+    }
+
 
